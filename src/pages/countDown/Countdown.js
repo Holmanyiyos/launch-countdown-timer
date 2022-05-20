@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { subtractDate } from "../../utilities/getTime.utilities";
 import Timenum from "./components/TimeNum";
+import "./styles.css"
 
 const Countdown = (props)=>{
     const [time, setTime] = useState("");
@@ -23,23 +24,44 @@ const Countdown = (props)=>{
 
 
     return(
-        <>
-            <h2>Count Down</h2>
+        <main className="countdown">
             {(time)? 
-             <>
+             <><div>
                 <Timenum num={time.days}/>
-                <span>Days</span>
+                <p>Days</p>
+             </div>
+             <div>
                 <Timenum num={time.hours}/>
-                <span>Hours</span>
+                <p>Hours</p>
+             </div>
+             <div>
                 <Timenum num={time.minutes} />
-                <span>Minutes</span>
+                <p>Minutes</p>
+             </div>
+             <div>
                 <Timenum num={time.seconds} />
-                <span>Seconds</span>
+                <p>Seconds</p>
+             </div>
             </>:
-            <p>Establecer hora</p>
-            }
-            
+            <><div>
+            <Timenum num={0}/>
+            <p>Days</p>
+         </div>
+         <div>
+            <Timenum num={0}/>
+            <p>Hours</p>
+         </div>
+         <div>
+            <Timenum num={0} />
+            <p>Minutes</p>
+         </div>
+         <div>
+            <Timenum num={0} />
+            <p>Seconds</p>
+         </div>
         </>
+            }
+        </main>
     )
 }
 

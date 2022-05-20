@@ -1,0 +1,38 @@
+.timenum{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    align-content: center;
+    box-sizing: border-box;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    background-color: hsl(236, 21%, 26%);
+    font-size: 3rem;
+    border-radius: 7px;
+    color: hsl(345, 95%, 68%);
+}
+
+.timenum::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: hsl(234, 17%, 12%);
+    position: absolute;
+    top: 45px;
+    left: -5px;
+}
+.timenum::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: hsl(234, 17%, 12%);
+    position: absolute;
+    top: 45px;
+    right: -5px;
+}
+

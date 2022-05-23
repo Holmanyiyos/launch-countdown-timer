@@ -1,38 +1,51 @@
-.timenum{
+.num__container{
     position: relative;
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     align-content: center;
     box-sizing: border-box;
-    padding-top: 20px;
-    margin-bottom: 15px;
     background-color: hsl(236, 21%, 26%);
     font-size: 3rem;
     border-radius: 7px;
     color: hsl(345, 95%, 68%);
 }
 
+.num__container::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 53%;
+    position: absolute;
+    top: 0;
+    background-color: hsl(235, 15%, 14%);
+    opacity: 0.5;
+}
+
+.timenum{
+    padding-top: 25px;
+}
+
 .timenum::before{
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background-color: hsl(234, 17%, 12%);
     position: absolute;
-    top: 45px;
-    left: -5px;
+    top: 55px;
+    left: -8px;
 }
 .timenum::after{
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background-color: hsl(234, 17%, 12%);
     position: absolute;
-    top: 45px;
-    right: -5px;
+    top: 55px;
+    right: -8px;
 }
 

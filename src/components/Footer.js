@@ -2,7 +2,7 @@ import React from "react";
 import Facebook from "../assets/icon-facebook.svg"
 import Pinterest from "../assets/icon-pinterest.svg"
 import Instagram from "../assets/icon-instagram.svg"
-
+import "./styles.css"
 
 
 const Footer = ()=>{

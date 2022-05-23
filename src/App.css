@@ -36,6 +36,7 @@
 .countdown p{
   color: hsl(237, 18%, 59%);
   letter-spacing: 4px;
+  margin-top: 15px;
 }
 
 .footer{

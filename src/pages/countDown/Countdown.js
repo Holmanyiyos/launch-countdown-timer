@@ -1,26 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { subtractDate } from "../../utilities/getTime.utilities";
+import React from "react";
 import Timenum from "./components/TimeNum";
 import "./styles.css"
 
 const Countdown = (props)=>{
-    const [time, setTime] = useState("");
-    const [start, setStart] = useState(false);
-
-    
-    useEffect(()=>{
-        const time = subtractDate(props.timeSelected)
-        if(props.isActive){
-            setTime(time)
-        }
-    }, [start])
-    
-    if (props.isActive) {
-        
-        setInterval(()=>{
-            setStart(!start)
-        }, 1000)
-    }
+  const time = props.time;
 
 
     return(
@@ -44,19 +27,19 @@ const Countdown = (props)=>{
              </div>
             </>:
             <><div>
-            <Timenum num={0}/>
+            <Timenum num={"00"}/>
             <p>Days</p>
          </div>
          <div>
-            <Timenum num={0}/>
+            <Timenum num={"00"}/>
             <p>Hours</p>
          </div>
          <div>
-            <Timenum num={0} />
+            <Timenum num={"00"} />
             <p>Minutes</p>
          </div>
          <div>
-            <Timenum num={0} />
+            <Timenum num={"00"} />
             <p>Seconds</p>
          </div>
         </>

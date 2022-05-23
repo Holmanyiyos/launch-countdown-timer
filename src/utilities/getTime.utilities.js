@@ -1,11 +1,24 @@
 
-export const subtractDate =(date1 = "31/12/2022")=>{
+export const subtractDate =(date1)=>{
     const time1 = new Date(date1).getTime()
     const time2 = new Date().getTime()
 
     const difference = Math.abs(time2 - time1)
-    const result = format(difference)
-    return result
+    if(time2 >= time1 ){
+        const result = null
+        return result
+    }else{
+        const result = format(difference)
+        return result
+    }
+}
+
+function addZero(num){
+    if(num<=9){
+        return `0${num}`
+    }else{
+        return num
+    }
 }
 
 function format(num){
@@ -18,10 +31,10 @@ function format(num){
     const seconds = parseInt((((num % baseDias) % baseHoras) % baseMinutos) / 1000)
     
     const timer = {
-        days: days,
-        hours: hours,
-        minutes: minutes,
-        seconds: seconds
+        days: addZero(days),
+        hours: addZero(hours),
+        minutes: addZero(minutes),
+        seconds: addZero(seconds)
     }
     return timer
 }

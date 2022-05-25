@@ -8,42 +8,22 @@ const Countdown = (props)=>{
 
     return(
         <main className="countdown">
-            {(time.hours)? 
-             <><div>
-                <Timenum num={time.days}/>
+             <div>
+                <Timenum num={time.days || "00"}/>
                 <p>Days</p>
              </div>
              <div>
-                <Timenum num={time.hours}/>
+                <Timenum num={time.hours || "00"}/>
                 <p>Hours</p>
              </div>
              <div>
-                <Timenum num={time.minutes} />
+                <Timenum num={time.minutes || "00"} />
                 <p>Minutes</p>
              </div>
              <div>
-                <Timenum num={time.seconds} />
+                <Timenum num={time.seconds || "00"} />
                 <p>Seconds</p>
              </div>
-            </>:
-            <><div>
-            <Timenum num={"00"}/>
-            <p>Days</p>
-         </div>
-         <div>
-            <Timenum num={"00"}/>
-            <p>Hours</p>
-         </div>
-         <div>
-            <Timenum num={"00"} />
-            <p>Minutes</p>
-         </div>
-         <div>
-            <Timenum num={"00"} />
-            <p>Seconds</p>
-         </div>
-        </>
-            }
         </main>
     )
 }

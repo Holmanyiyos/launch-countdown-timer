@@ -15,15 +15,15 @@
 
 .modal{
     position: fixed;
-    top: 0;
+    top: 200px;
     width: 100%;
+    max-width: 1000px;
     height: 80px;
     background-color: hsl(345, 95%, 68%);
     color: #fff;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 10px 10px 0;
     text-align: center;
     font-family: 'Red Hat Text', sans-serif;
-
 }
 .modal h3{
     line-height: 80px;

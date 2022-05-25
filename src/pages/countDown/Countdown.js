@@ -8,7 +8,7 @@ const Countdown = (props)=>{
 
     return(
         <main className="countdown">
-            {(time)? 
+            {(time.hours)? 
              <><div>
                 <Timenum num={time.days}/>
                 <p>Days</p>

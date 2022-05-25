@@ -1,27 +1,14 @@
-import React ,{useState, useEffect} from "react";
+import React from "react";
 import "./styles.css"
 
 
 const ModalPortal = (props)=>{
-    const response = {messagge: "Terminaste la cuenta atrás"};
-    const [resp, setResp] = useState("")
-    const removeModal =()=>{
-        props.setModalOpen(false)
-    }
-    useEffect(()=>{
-        if(response.messagge){
-            try {
-                setResp(response.messagge)
-            } catch (error) {
-                console.log(error)
-            }
-        }
-    },[])
+    const response = props.time
     
     return (
         <div className="modal">
-            <h3>{resp}</h3>
-            <span onClick={removeModal}>✖</span>
+            <h3>{response.messagge}</h3>
+            <span onClick={props.removeModal}>✖</span>
         </div>
     )
 };

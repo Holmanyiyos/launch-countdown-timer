@@ -36,3 +36,12 @@
     font-size: 1.2rem;
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+   .modal{
+       height: 100px;
+    }
+    .modal h3{
+       line-height: 50px;
+   }
+}

@@ -90,3 +90,24 @@
         right: -8px;
     }
 }
+
+@media (max-width: 450px) {
+    .num__container{
+      font-size: 1.7rem;
+    }
+    .timenum{
+        padding-top: 20px;
+    }
+    .timenum::before{
+        width: 14px;
+        height: 14px;
+        top: 33px;
+        left: -9px;
+    }
+    .timenum::after{
+        width: 14px;
+        height: 14px;
+        top: 33px;
+        right: -9px;
+    }
+}

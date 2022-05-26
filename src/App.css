@@ -68,3 +68,10 @@
   }
  }
 
+ @media (max-width: 450px) {
+  .countdown div{
+    width: 75px;
+    height: 75px;
+  }
+ }
+

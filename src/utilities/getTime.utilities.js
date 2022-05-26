@@ -6,14 +6,14 @@ export const subtractDate =(date1)=>{
     const difference = Math.abs(time2 - time1)
     if(time1){
         if(difference <= 800){
-            result = {messagge: "Tiempo agotado"}
+            result = {messagge: "Time out"}
         }else if(time2 > time1 ){
-            result = {messagge: "La fecha seleccionada no puede ser previa a la fecha actual"}
+            result = {messagge: "The selected date cannot be prior to the current date"}
         }else{
             result = format(difference)
         }
     }else{
-        result = {messagge: "Debe seleccionar una fecha para iniciar"}
+        result = {messagge: "You must select a date to start"}
     }
     return result
 }

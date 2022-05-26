@@ -24,13 +24,17 @@
   letter-spacing: 4px;
 }
 .countdown{
+  width: 100vw;
   display: flex;
+  justify-content: center;
   margin-top: 100px;
 }
 
 .countdown div{
+  width: 230px;
+  height: 230px;
   text-align: center;
-  margin: 0 15px;
+  margin: 0 auto;
 }
 
 .countdown p{
@@ -47,4 +51,20 @@
   background-image: url("./assets/pattern-hills.svg");
 }
 
+@media (max-width: 800px) {
+ .footer{
+   min-height: 100px;
+ }
+ .countdown div{
+   width: 110px;
+   height: 110px;
+ }
+}
+
+@media (max-width: 600px) {
+  .countdown div{
+    width: 90px;
+    height: 90px;
+  }
+ }
 

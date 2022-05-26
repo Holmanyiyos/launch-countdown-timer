@@ -42,7 +42,7 @@
 @media (max-width: 600px) {
    .modal{
        height: 100px;
-       width: 90%;
+       width: 95%;
     }
     .modal h3{
         display: block;
@@ -50,3 +50,9 @@
         margin: 0 30px 0 10px;
    }
 }
+
+@media (max-width: 450px) {
+     .modal h3{
+         font-size: 1.3rem;
+    }
+ }
